@@ -11,7 +11,56 @@ let botonReiniciar = document.getElementById('boton-reiniciar');
 let mascotaJugador = document.getElementById('mascota-jugador');
 let mascotaMaquina = document.getElementById('mascota-maquina');
 
+let mensajes = document.getElementById('mensajes');
+
+let ataqueJugador
+let ataqueMaquina
+
 botonMascotaJugador.addEventListener('click', SeleccionarMascotaJugador)
+
+botonFuego.addEventListener('click', ataqueFuego)
+botonAgua.addEventListener('click', ataqueAgua)
+botonTierra.addEventListener('click', ataqueTierra)
+
+function ataqueFuego() {
+    ataqueJugador = 'Fuego';
+    ataqueEnemigo()
+}
+
+function ataqueAgua() {
+    ataqueJugador = 'Agua'
+    ataqueEnemigo()
+}
+
+function ataqueTierra() {
+    ataqueJugador = 'Tierra'
+    ataqueEnemigo()
+}
+
+function ataqueEnemigo() {
+    let resultadoAtaqueEnemigo = aleatorio(1, 3)
+
+    if (resultadoAtaqueEnemigo == 1) {
+        ataqueMaquina = 'Fuego';
+    } else if (resultadoAtaqueEnemigo == 2) {
+        ataqueMaquina = 'Agua';
+    } else {
+        ataqueMaquina = 'Tierra'
+    }
+
+    crearmensaje()
+
+    console.log(resultadoAtaqueEnemigo)
+
+}
+
+function crearmensaje() {
+    let parrafoMensaje = document.createElement('p')
+    parrafoMensaje.innerHTML = 'Tu mascota ataco con: ' + ataqueJugador + ' y la mascota del enemigo ataco con: ' + ataqueMaquina;
+    parrafoMensaje.style = 'text-align: center'
+    mensajes.appendChild(parrafoMensaje)
+
+}
 
 function SeleccionarMascotaJugador() {
 
@@ -48,11 +97,9 @@ function SeleccionarMascotaMaquina() {
         mascotaMaquina.innerHTML = 'ratigueya'
     }
 
-
 }
 
 function aleatorio(minimo, maximo) {
     return Math.floor(Math.random() * (maximo - minimo + 1) + minimo);
 }
-
 
