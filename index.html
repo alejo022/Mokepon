@@ -16,6 +16,7 @@
 
     <!--Css personalizado  -->
     <link rel="stylesheet" href="./assets/css/estilos.css">
+
 </head>
 
 <body>
@@ -23,48 +24,54 @@
     <div class="container">
 
         <h1 class="p-2 border-bottom w-100 text-center text-azul">
-            Mokepon ✨
+            Mokepon - Juega contra la maquina
         </h1>
+
+        <h3 class="text-center mb-5">Elige tu mascota para jugar</h3>
+
+        <section id="mensajes">
+            <p class="text-center">
+                ganaste
+            </p>
+        </section>
 
         <section id="seleccionar-mascota">
 
+            <div class="d-flex justify-content-center">
+                <input type="radio" name="mascota" id="hipodoge" />
+                <label for="hipodoge">Hipodoge</label>
 
-            <h2>Elige tu mascota a competir</h2>
+                <input type="radio" name="mascota" id="capipepo" />
+                <label for="capipepo">Capipepo</label>
 
-            <input type="radio" name="mascota" id="hipodoge" />
-            <label for="hipodoge">Hipodoge</label>
+                <input type="radio" name="mascota" id="ratigueya" />
+                <label for="ratigueya">Ratigueya</label>
+            </div>
 
-            <input type="radio" name="mascota" id="capipepo" />
-            <label for="capipepo">Capipepo</label>
-
-            <input type="radio" name="mascota" id="ratigueya" />
-            <label for="ratigueya">Ratigueya</label>
-
-            <button id="boton-mascota" class="btn btn-warning rounded-pill">
-                Seleccionar mascota
-            </button>
+            <div class="modal-footer justify-content-center border-top mt-4">
+                <button id="boton-mascota" class="btn btn-warning rounded-pill m-4">
+                    Seleccionar mascota
+                </button>
+            </div>
 
         </section>
         <section id="seleccionar-ataque">
 
-            <h2>Elige tu ataque para iniciar</h2>
+            <h3 class="text-center mb-5">Elige tu ataque</h3>
 
-
-            <button id="boton-agua" class="btn bg-azul text-white m-1 rounded-pill">Agua <i
-                    class="fa-solid fa-droplet text-white"></i></button>
-            <button id="boton-fuego" class="btn bg-azul text-white m-1 rounded-pill">Fuego 🔥</button>
-            <button id="boton-tierra" class="btn bg-azul text-white m-1 rounded-pill">Tierra ⛰️</button>
+            <div class="d-flex justify-content-center">
+                <button id="boton-agua" class="btn bg-azul text-white m-1 rounded-pill">Agua <i
+                        class="fa-solid fa-droplet text-white"></i></button>
+                <button id="boton-fuego" class="btn bg-azul text-white m-1 rounded-pill">Fuego 🔥</button>
+                <button id="boton-tierra" class="btn bg-azul text-white m-1 rounded-pill">Tierra ⛰️</button>
+            </div>
 
         </section>
-        <section id="mensajes">
-            <p>
-                ganaste
-            </p>
-        </section>
+
         <section>
             <div class="modal-footer justify-content-center border-top">
-                <button id="boton-reiniciar" class="btn btn-danger rounded-pill">
-                    reiniciar juego
+                <button id="boton-reiniciar" class="btn btn-danger rounded-pill m-3">
+                    reiniciar juego <i class="fa-solid fa-rotate-right"></i>
                 </button>
             </div>
         </section>
