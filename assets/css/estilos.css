@@ -1,0 +1,31 @@
+:root {
+    --azul: #5aa1e2;
+    --verde: #24bb5e;
+}
+
+
+.text-azul {
+    color: var(--azul);
+}
+
+.bg-azul {
+    background-color: var(--azul);
+}
+
+.text-verde {
+    color: var(--verde);
+}
+
+.bg-verde {
+    background-color: var(--verde);
+}
+
+[type=radio] {
+    width: 1.8em;
+    height: 1.8em !important;
+}
+
+:checked[type=radio] {
+    background-color: var(--color-azul);
+    background-image: none;
+}
