@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+* {
+    box-sizing: border-box;
+
+}
+
+h1 {
+    font-family: 'Faster One', cursive;
+}
+
 :root {
     --azul: #5aa1e2;
     --verde: #24bb5e;
 }
-
 
 .text-azul {
     color: var(--azul);
@@ -28,4 +38,13 @@
 :checked[type=radio] {
     background-color: var(--color-azul);
     background-image: none;
+}
+
+.content-contenido {
+    height: 100vh;
+    background-color: #f1a761;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

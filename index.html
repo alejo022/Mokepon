@@ -20,87 +20,97 @@
 
 <body>
 
-    <div class="container">
+    <div class="content-contenido">
 
-        <h1 class="p-2 border-bottom w-100 text-center text-azul">
-            Mokepon - Juega contra la maquina
-        </h1>
+        <div class="container">
 
-        <table class="table table-striped table-hover text-center table-bordered">
-            <thead class="bg-azul text-white fw-bold">
-                <tr>
-                    <th scope="col">Partidas perdidas</th>
-                    <th scope="col">Partidas empatadas</th>
-                    <th scope="col">Partidas ganadas ✨</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th> <span id="txt_perdiste">0</span></th>
-                    <th><span id="txt_empataron">0</span></th>
-                    <th><span id="txt_ganaste">0</span></th>
-                </tr>
-            </tbody>
-        </table>
 
-        <h3 class="text-center mb-5">Elige tu mascota para jugar</h3>
+            <section id="seleccionar-mascota">
 
-        <p class="text-center">
-            Tu mascota <span id="mascota-jugador" class="text-danger fw-bold">?</span> tiene <span
-                id="vidas-jugador">3</span>
-            vidas
-        </p>
-        <p class="text-center">
-            La mascota de la maquina <span id="mascota-maquina" class="text-danger fw-bold">?</span> tiene <span
-                id="vidas-maquina">3</span>
-            vidas
-        </p>
+                <h1 class="text-center mb-5">
+                    Elige tu mascota para jugar
+                </h1>
 
-        <section id="mensajes">
+                <div class="d-flex justify-content-center">
+                    <div class="content-mascota">
+                        <img src="assets/img/Hipodoge.png" alt="">
+                        <input type="radio" name="mascota" id="hipodoge" />
+                        <label for="hipodoge">Hipodoge</label>
+                    </div>
+                    <div class="content-mascota">
+                        <img src="assets/img/Capipepo.png" alt="">
+                        <input type="radio" name="mascota" id="capipepo" />
+                        <label for="capipepo">Capipepo</label>
+                    </div>
+                    <div class="content-mascota">
+                        <img src="assets/img/Ratigueya.png" alt="">
+                        <input type="radio" name="mascota" id="ratigueya" />
+                        <label for="ratigueya">Ratigueya</label>
+                    </div>
+                </div>
 
-        </section>
+                <div class="modal-footer justify-content-center border-top mt-4">
+                    <button id="boton-mascota" class="btn btn-warning rounded-pill m-4">
+                        Seleccionar mascota
+                    </button>
+                </div>
 
-        <section id="seleccionar-mascota">
+            </section>
 
-            <div class="d-flex justify-content-center">
-                <input type="radio" name="mascota" id="hipodoge" />
-                <label for="hipodoge">Hipodoge</label>
+            <section id="mensajes">
 
-                <input type="radio" name="mascota" id="capipepo" />
-                <label for="capipepo">Capipepo</label>
+            </section>
 
-                <input type="radio" name="mascota" id="ratigueya" />
-                <label for="ratigueya">Ratigueya</label>
-            </div>
+            <section id="seleccionar-ataque">
 
-            <div class="modal-footer justify-content-center border-top mt-4">
-                <button id="boton-mascota" class="btn btn-warning rounded-pill m-4">
-                    Seleccionar mascota
-                </button>
-            </div>
+                <table class="table table-striped table-hover text-center table-bordered">
+                    <thead class="bg-azul text-white fw-bold">
+                        <tr>
+                            <th scope="col">Partidas perdidas</th>
+                            <th scope="col">Partidas empatadas</th>
+                            <th scope="col">Partidas ganadas ✨</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th> <span id="txt_perdiste">0</span></th>
+                            <th><span id="txt_empataron">0</span></th>
+                            <th><span id="txt_ganaste">0</span></th>
+                        </tr>
+                    </tbody>
+                </table>
 
-        </section>
 
-        <section id="seleccionar-ataque">
+                <p class="text-center">
+                    Tu mascota <span id="mascota-jugador" class="text-danger fw-bold">?</span> tiene <span
+                        id="vidas-jugador">3</span>
+                    vidas
+                </p>
+                <p class="text-center">
+                    La mascota de la maquina <span id="mascota-maquina" class="text-danger fw-bold">?</span> tiene <span
+                        id="vidas-maquina">3</span>
+                    vidas
+                </p>
 
-            <h3 class="text-center mb-5">Elige tu ataque</h3>
+                <h3 class="text-center mb-5">Elige tu ataque</h3>
 
-            <div class="d-flex justify-content-center">
-                <button id="boton-agua" class="btn bg-azul text-white m-1 rounded-pill">Agua <i
-                        class="fa-solid fa-droplet text-white"></i></button>
-                <button id="boton-fuego" class="btn bg-azul text-white m-1 rounded-pill">Fuego 🔥</button>
-                <button id="boton-tierra" class="btn bg-azul text-white m-1 rounded-pill">Tierra ⛰️</button>
-            </div>
+                <div class="d-flex justify-content-center">
+                    <button id="boton-agua" class="btn bg-azul text-white m-1 rounded-pill">Agua <i
+                            class="fa-solid fa-droplet text-white"></i></button>
+                    <button id="boton-fuego" class="btn bg-azul text-white m-1 rounded-pill">Fuego 🔥</button>
+                    <button id="boton-tierra" class="btn bg-azul text-white m-1 rounded-pill">Tierra ⛰️</button>
+                </div>
 
-        </section>
+            </section>
 
-        <section id="reiniciar-juego">
-            <div class="modal-footer justify-content-center border-top">
-                <button id="boton-reiniciar" class="btn btn-danger rounded-pill m-3">
-                    reiniciar juego <i class="fa-solid fa-rotate-right"></i>
-                </button>
-            </div>
-        </section>
+            <section id="reiniciar-juego">
+                <div class="modal-footer justify-content-center border-top">
+                    <button id="boton-reiniciar" class="btn btn-danger rounded-pill m-3">
+                        reiniciar juego <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

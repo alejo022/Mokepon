@@ -34,10 +34,6 @@ let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota');
 let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque');
 let sectionReiniciarJuego = document.getElementById('reiniciar-juego');
 
-
-
-
-
 botonMascotaJugador.addEventListener('click', SeleccionarMascotaJugador)
 
 botonFuego.addEventListener('click', ataqueFuego)
@@ -52,7 +48,6 @@ function iniciarJuego() {
     sectionSeleccionarAtaque.style = 'display: none';
     sectionReiniciarJuego.style = 'display: none';
 }
-
 
 function ataqueFuego() {
     ataqueJugador = 'Fuego';
@@ -125,27 +120,20 @@ function calcularResultado() {
 
 function revisarVidas() {
     if (contadorVidasMaquina == 0) {
-        sectionSeleccionarAtaque.style = 'display:none';
-        sectionReiniciarJuego.style = 'display: block';
-        crearmensajeFinal("Felicitaciones ! GANASTE ✨")
+        crearmensajeFinal("Felicitaciones ! GANASTE ✨");
     } else if (contadorVidasJugador == 0) {
-        sectionSeleccionarAtaque.style = 'display:none';
-        sectionReiniciarJuego.style = 'display: block';
-        crearmensajeFinal("PERDISTE ! Sigue intentando...")
+        crearmensajeFinal("PERDISTE ! Sigue intentando...");
     }
 }
 
 function crearmensaje(resultado) {
-
     let parrafoMensaje = document.createElement('p')
     parrafoMensaje.innerHTML = 'Tu mascota ' + mascotaJugador.innerHTML + ' ataco con: ' + ataqueJugador + ' y la mascota ' + mascotaMaquina.innerHTML + ' del enemigo ataco con: ' + ataqueMaquina + ' - ' + resultado;
     parrafoMensaje.style = 'text-align: center'
     mensajes.appendChild(parrafoMensaje)
-
 }
 
 function crearmensajeFinal(resultadoFinal) {
-
     let parrafoMensaje = document.createElement('p')
     parrafoMensaje.innerHTML = resultadoFinal;
     parrafoMensaje.style = 'text-align: center'
@@ -155,6 +143,8 @@ function crearmensajeFinal(resultadoFinal) {
     botonAgua.disabled = true;
     botonTierra.disabled = true;
 
+    sectionSeleccionarAtaque.style = 'display:none';
+    sectionReiniciarJuego.style = 'display: block';
 }
 
 function SeleccionarMascotaJugador() {
@@ -177,7 +167,6 @@ function SeleccionarMascotaJugador() {
     }
 
     SeleccionarMascotaMaquina()
-
 }
 
 function SeleccionarMascotaMaquina() {
@@ -193,7 +182,6 @@ function SeleccionarMascotaMaquina() {
     } else {
         mascotaMaquina.innerHTML = 'ratigueya'
     }
-
 }
 
 function reiniciarJuego() {
