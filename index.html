@@ -16,42 +16,46 @@
 
     <!--Css personalizado  -->
     <link rel="stylesheet" href="./assets/css/estilos.css">
+
 </head>
 
 <body>
 
     <div class="content-contenido">
-
         <div class="container">
-
-
             <section id="seleccionar-mascota">
 
                 <h1 class="text-center mb-5">
                     Elige tu mascota para jugar
                 </h1>
 
-                <div class="d-flex justify-content-center">
-                    <div class="content-mascota">
-                        <img src="assets/img/Hipodoge.png" alt="">
-                        <input type="radio" name="mascota" id="hipodoge" />
-                        <label for="hipodoge">Hipodoge</label>
+                <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+                    <div class="content-mascota m-2" style="max-width: 300px;">
+                        <label for="hipodoge" class="d-flex align-items-center pb-3" style="flex-direction: column;">
+                            <img src="assets/img/Hipodoge.png" alt="" class="img-mascota">
+                            Hipodoge
+                            <input type="radio" name="mascota" id="hipodoge" class="" />
+                        </label>
                     </div>
-                    <div class="content-mascota">
-                        <img src="assets/img/Capipepo.png" alt="">
-                        <input type="radio" name="mascota" id="capipepo" />
-                        <label for="capipepo">Capipepo</label>
+                    <div class="content-mascota m-2" style="max-width: 300px;">
+                        <label for="capipepo" class="d-flex align-items-center pb-3" style="flex-direction: column;">
+                            <img src="assets/img/Capipepo.png" alt="" class="img-mascota">
+                            Capipepo
+                            <input type="radio" name="mascota" id="capipepo" class="" />
+                        </label>
                     </div>
-                    <div class="content-mascota">
-                        <img src="assets/img/Ratigueya.png" alt="">
-                        <input type="radio" name="mascota" id="ratigueya" />
-                        <label for="ratigueya">Ratigueya</label>
+                    <div class="content-mascota m-2" style="max-width: 300px;">
+                        <label for="ratigueya" class="d-flex align-items-center pb-3" style="flex-direction: column;">
+                            <img src="assets/img/Ratigueya.png" alt="" class="img-mascota">
+                            Ratigueya
+                            <input type="radio" name="mascota" id="ratigueya" class="" />
+                        </label>
                     </div>
                 </div>
 
                 <div class="modal-footer justify-content-center border-top mt-4">
-                    <button id="boton-mascota" class="btn btn-warning rounded-pill m-4">
-                        Seleccionar mascota
+                    <button id="boton-mascota" class="btn bg-dark text-white rounded-pill m-4">
+                        Empezar juego
                     </button>
                 </div>
 
@@ -79,7 +83,6 @@
                         </tr>
                     </tbody>
                 </table>
-
 
                 <p class="text-center">
                     Tu mascota <span id="mascota-jugador" class="text-danger fw-bold">?</span> tiene <span
